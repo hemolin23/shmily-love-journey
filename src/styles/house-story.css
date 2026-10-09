@@ -1,0 +1,707 @@
+@font-face {
+  font-family: 'Room Hand';
+  src: url('/fonts/room-hand.woff2') format('woff2');
+  font-display: swap;
+}
+
+:root {
+  --night-window: #0d1517;
+  --rain-slate: #6f8791;
+  --lamp-amber: #e7a65d;
+  --lamp-pale: #f3d6ac;
+  --tulip-cream: #f1e8d7;
+  --ink-warm: #251f19;
+  --paper-night: #1d292a;
+  --muted-cream: rgba(241, 232, 215, 0.58);
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  overflow: clip;
+  background: var(--night-window);
+}
+
+button {
+  font: inherit;
+}
+
+.story-house-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow: clip;
+  color: var(--tulip-cream);
+  font-family: 'Songti SC', 'STSong', serif;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(77, 104, 105, 0.25), transparent 44%),
+    radial-gradient(circle at 8% 84%, rgba(231, 166, 93, 0.08), transparent 29%),
+    linear-gradient(145deg, #152225 0%, #0b1214 54%, #11191a 100%);
+  isolation: isolate;
+}
+
+.story-house-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(7, 12, 13, 0.42), transparent 24%, transparent 76%, rgba(7, 12, 13, 0.55));
+}
+
+.story-house-grain {
+  position: absolute;
+  inset: -50%;
+  z-index: 9;
+  pointer-events: none;
+  opacity: 0.055;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+  animation: story-grain 0.45s steps(2) infinite;
+}
+
+@keyframes story-grain {
+  0% { transform: translate3d(-2%, -1%, 0); }
+  50% { transform: translate3d(1%, 2%, 0); }
+  100% { transform: translate3d(2%, -2%, 0); }
+}
+
+.story-house-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 12;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px 38px;
+  pointer-events: none;
+}
+
+.story-house-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  color: inherit;
+  text-align: left;
+  border: 0;
+  background: none;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.story-house-brand > svg {
+  color: var(--lamp-amber);
+}
+
+.story-house-brand span {
+  display: grid;
+  gap: 3px;
+}
+
+.story-house-brand strong {
+  font-family: 'Room Hand', 'Songti SC', serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+}
+
+.story-house-brand small,
+.story-house-progress span,
+.story-house-panel-english,
+.story-house-panel-number,
+.story-house-kicker {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 9px;
+  letter-spacing: 0.19em;
+  color: var(--muted-cream);
+}
+
+.story-house-progress {
+  display: grid;
+  justify-items: end;
+  gap: 5px;
+}
+
+.story-house-progress strong {
+  color: var(--lamp-pale);
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.story-house-act-switch {
+  position: absolute;
+  z-index: 13;
+  top: 31px;
+  left: 50%;
+  display: flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid rgba(241, 232, 215, 0.14);
+  background: rgba(8, 15, 17, 0.34);
+  backdrop-filter: blur(12px);
+  transform: translateX(-50%);
+}
+
+.story-house-act-switch button {
+  padding: 7px 11px;
+  color: rgba(241, 232, 215, 0.5);
+  border: 0;
+  background: transparent;
+  font: 9px/1.2 Georgia, serif;
+  letter-spacing: 0.13em;
+  cursor: pointer;
+}
+
+.story-house-act-switch button.is-active {
+  color: var(--ink-warm);
+  background: var(--lamp-pale);
+}
+
+.story-house-canvas-wrap,
+.story-house-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.story-house-canvas-wrap {
+  z-index: 1;
+}
+
+.story-house-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.story-house-loading,
+.story-house-hover,
+.story-house-controls-hint {
+  position: absolute;
+  z-index: 2;
+  font-family: 'Songti SC', serif;
+  color: var(--muted-cream);
+  pointer-events: none;
+}
+
+.story-house-loading {
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+
+.story-house-hover {
+  left: 50%;
+  bottom: 116px;
+  transform: translate(-50%, 8px);
+  padding: 7px 13px;
+  color: var(--lamp-pale);
+  border-bottom: 1px solid rgba(231, 166, 93, 0.42);
+  opacity: 0;
+  transition: 180ms ease;
+}
+
+.story-house-hover.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.story-house-controls-hint {
+  right: 38px;
+  bottom: 33px;
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  opacity: 0.65;
+}
+
+.story-house-intro {
+  position: absolute;
+  z-index: 10;
+  top: 24%;
+  left: clamp(34px, 7vw, 112px);
+  width: min(500px, 42vw);
+  pointer-events: auto;
+  animation: story-rise 900ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+.story-house-kicker {
+  margin: 0 0 22px;
+  color: var(--lamp-amber);
+}
+
+.story-house-intro h1 {
+  margin: 0;
+  font-family: 'Room Hand', 'Songti SC', serif;
+  font-size: clamp(38px, 5.2vw, 76px);
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+
+.story-house-intro > p:not(.story-house-kicker) {
+  margin: 25px 0 0;
+  color: rgba(241, 232, 215, 0.7);
+  font-size: clamp(14px, 1.25vw, 18px);
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+.story-house-primary,
+.story-house-ending-trigger,
+.story-house-restart {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink-warm);
+  border: 0;
+  background: var(--lamp-pale);
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.story-house-primary {
+  margin-top: 30px;
+  padding: 13px 18px;
+  font-size: 13px;
+  letter-spacing: 0.07em;
+}
+
+.story-house-primary:hover,
+.story-house-ending-trigger:hover,
+.story-house-restart:hover {
+  transform: translateY(-2px);
+  background: #fff0d8;
+}
+
+.story-house-timeline {
+  position: absolute;
+  z-index: 12;
+  left: 50%;
+  bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(72px, 1fr));
+  width: min(720px, 60vw);
+  transform: translateX(-50%);
+}
+
+.story-house-timeline::before {
+  content: '';
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  top: 7px;
+  height: 1px;
+  background: rgba(241, 232, 215, 0.2);
+}
+
+.story-house-timeline button {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 0 4px;
+  color: rgba(241, 232, 215, 0.48);
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.story-house-node {
+  position: relative;
+  z-index: 1;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(241, 232, 215, 0.42);
+  border-radius: 50%;
+  background: var(--night-window);
+  transition: 200ms ease;
+}
+
+.story-house-timeline small {
+  font-family: Georgia, serif;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+.story-house-timeline strong {
+  overflow: hidden;
+  max-width: 100%;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.story-house-timeline button.is-visited .story-house-node {
+  border-color: var(--lamp-amber);
+  background: var(--lamp-amber);
+  box-shadow: 0 0 12px rgba(231, 166, 93, 0.65);
+}
+
+.story-house-timeline button.is-visited,
+.story-house-timeline button.is-selected {
+  color: var(--tulip-cream);
+}
+
+.story-house-timeline button.is-selected .story-house-node {
+  transform: scale(1.55);
+  background: var(--tulip-cream);
+  border-color: var(--tulip-cream);
+}
+
+.story-house-panel {
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(390px, 34vw);
+  box-sizing: border-box;
+  padding: 82px 34px 96px 38px;
+  overflow: auto;
+  color: var(--tulip-cream);
+  border-left: 1px solid rgba(231, 166, 93, 0.24);
+  background: linear-gradient(90deg, rgba(18, 28, 30, 0.91), rgba(16, 25, 27, 0.985) 28%);
+  box-shadow: -22px 0 55px rgba(3, 8, 9, 0.3);
+  animation: story-panel-in 380ms cubic-bezier(.2,.8,.2,1) both;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(231, 166, 93, 0.32) transparent;
+}
+
+.story-house-panel::before {
+  content: '';
+  position: absolute;
+  top: 128px;
+  left: -1px;
+  width: 2px;
+  height: 82px;
+  background: var(--lamp-amber);
+  box-shadow: 0 0 22px rgba(231, 166, 93, 0.5);
+}
+
+.story-house-close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  padding: 0;
+  color: rgba(241, 232, 215, 0.7);
+  border: 1px solid rgba(241, 232, 215, 0.18);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.story-house-panel-number {
+  margin: 0 0 4px;
+  color: var(--lamp-amber);
+}
+
+.story-house-panel-english {
+  margin: 0 0 14px;
+}
+
+.story-house-panel h2 {
+  margin: 0 0 14px;
+  font-family: 'Room Hand', 'Songti SC', serif;
+  font-size: clamp(31px, 3.2vw, 46px);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.story-house-meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: var(--muted-cream);
+  font-family: Georgia, 'Songti SC', serif;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+}
+
+.story-house-meta span + span::before {
+  content: '—';
+  margin-right: 10px;
+  color: rgba(231, 166, 93, 0.5);
+}
+
+.story-house-change {
+  display: inline-block;
+  margin: 0 0 22px;
+  padding-bottom: 5px;
+  color: var(--lamp-pale);
+  border-bottom: 1px solid rgba(231, 166, 93, 0.32);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.story-house-summary {
+  margin: 0;
+  color: rgba(241, 232, 215, 0.78);
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.035em;
+}
+
+.story-house-panel blockquote {
+  position: relative;
+  margin: 25px 0 24px;
+  padding: 14px 0 14px 19px;
+  color: var(--tulip-cream);
+  border-left: 1px solid var(--lamp-amber);
+  font-family: 'Room Hand', 'Songti SC', serif;
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.story-house-object-list {
+  border-top: 1px solid rgba(241, 232, 215, 0.12);
+}
+
+.story-house-object-list > div {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(241, 232, 215, 0.1);
+}
+
+.story-house-object-list strong {
+  color: var(--lamp-pale);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.story-house-object-list span {
+  color: var(--muted-cream);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.story-house-panel-nav {
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.story-house-panel-nav button {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  padding: 0;
+  color: var(--tulip-cream);
+  border: 0;
+  background: rgba(241, 232, 215, 0.08);
+  cursor: pointer;
+}
+
+.story-house-panel-nav span {
+  color: rgba(241, 232, 215, 0.38);
+  font-size: 9px;
+  line-height: 1.45;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.story-house-ending-trigger {
+  position: absolute;
+  z-index: 14;
+  right: 38px;
+  bottom: 66px;
+  padding: 11px 15px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  animation: story-pulse 2.8s ease-in-out infinite;
+}
+
+.story-house-ending {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 60px 24px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 33% 48%, rgba(231, 166, 93, 0.2), transparent 20%),
+    radial-gradient(circle at 67% 48%, rgba(231, 166, 93, 0.2), transparent 20%),
+    #080e0f;
+  animation: story-fade 600ms ease both;
+}
+
+.story-house-ending > p {
+  margin: 0 0 16px;
+  color: var(--lamp-amber);
+  font-family: Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+}
+
+.story-house-ending h2 {
+  margin: 0;
+  font-family: 'Room Hand', 'Songti SC', serif;
+  font-size: clamp(44px, 7vw, 92px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.story-house-ending-line {
+  width: min(440px, 62vw);
+  height: 1px;
+  margin: 35px 0;
+  background: linear-gradient(90deg, transparent, var(--lamp-amber), transparent);
+  box-shadow: 0 0 18px rgba(231, 166, 93, 0.7);
+}
+
+.story-house-ending h3 {
+  margin: 0 0 20px;
+  color: var(--lamp-pale);
+  font-size: clamp(21px, 2.4vw, 32px);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+.story-house-ending > span {
+  width: min(570px, 78vw);
+  color: var(--muted-cream);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.story-house-restart {
+  margin-top: 34px;
+  padding: 10px 16px;
+  font-size: 12px;
+}
+
+.story-house-ending-lamps {
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  display: flex;
+  width: min(460px, 70vw);
+  justify-content: space-between;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.story-house-ending-lamps i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lamp-pale);
+  box-shadow: 0 0 22px 11px rgba(231, 166, 93, 0.12), 0 0 85px 48px rgba(231, 166, 93, 0.08);
+}
+
+@keyframes story-panel-in {
+  from { opacity: 0; transform: translateX(28px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes story-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes story-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes story-pulse {
+  50% { box-shadow: 0 0 24px rgba(231, 166, 93, 0.28); }
+}
+
+@media (max-width: 900px) {
+  .story-house-header { padding: 20px 22px; }
+  .story-house-progress { display: none; }
+  .story-house-intro {
+    top: 16%;
+    left: 25px;
+    width: calc(100% - 50px);
+  }
+  .story-house-intro::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: -42px -34px -48px -25px;
+    background: linear-gradient(90deg, rgba(9, 15, 17, 0.94) 0%, rgba(9, 15, 17, 0.75) 72%, transparent 100%);
+  }
+  .story-house-intro h1 { font-size: clamp(33px, 9vw, 48px); }
+  .story-house-intro > p:not(.story-house-kicker) { font-size: 14px; }
+  .story-house-timeline {
+    bottom: 15px;
+    width: calc(100% - 26px);
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .story-house-timeline strong { display: none; }
+  .story-house-controls-hint { right: 20px; bottom: 58px; }
+  .story-house-hover { bottom: 82px; }
+  .story-house-panel {
+    top: auto;
+    left: 0;
+    width: 100%;
+    height: min(54vh, 480px);
+    padding: 38px 25px 88px;
+    border-top: 1px solid rgba(231, 166, 93, 0.28);
+    border-left: 0;
+    background: linear-gradient(180deg, rgba(18, 28, 30, 0.98), #10191b 28%);
+    animation-name: story-panel-up;
+  }
+  .story-house-panel::before {
+    top: -1px;
+    left: 24px;
+    width: 72px;
+    height: 2px;
+  }
+  .story-house-panel h2 { font-size: 34px; }
+  .story-house-close { top: 18px; right: 20px; }
+  .story-house-ending-trigger { right: 18px; bottom: 54px; }
+}
+
+@keyframes story-panel-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 560px) {
+  .story-house-brand strong { font-size: 15px; }
+  .story-house-brand small { display: none; }
+  .story-house-primary { margin-top: 24px; }
+  .story-house-controls-hint { display: none; }
+  .story-house-panel { height: 58vh; }
+  .story-house-meta { flex-wrap: wrap; }
+  .story-house-object-list > div { grid-template-columns: 74px 1fr; }
+  .story-house-ending-trigger { font-size: 0; }
+  .story-house-ending-trigger::before { content: '看见整所家'; font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-house-grain,
+  .story-house-ending-trigger { animation: none; }
+  .story-house-intro,
+  .story-house-panel,
+  .story-house-ending { animation-duration: 1ms; }
+}

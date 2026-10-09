@@ -1,0 +1,22 @@
+{
+  "public/act2/characters/female-protagonist-v1.png": "f2477fabb96bfc852d318e7f0c2df20610dc2fcaa318134a0e0461def342f733",
+  "public/act2/characters/male-protagonist-v1.png": "41751a19982e26671f41e12420e97eefce33195511ee3672f0b062dd4ba1689f",
+  "public/act2/keyframes/shot-02-airport-meeting.png": "b387f9fdf0d3f51e66944337377cb2844d1085e945fa61f3eef755b460831d85",
+  "public/act2/keyframes/shot-06-beijing-rain.png": "23f4f0f57f01dea35bab46fa24711ae5d865dacdd6e705ce9162ac8d0b65c2ba",
+  "public/act2/keyframes/shot-10-nature-home.png": "eb9a391bb6f632e244a78e8d0d0b7a1b4ef447c481a0132559c94f6e870e2264",
+  "public/act2/keyframes/shot-12-memory-house-final.png": "d3c60f76973af7c3e9a8114a94a5056a1574a1ca4ec547ca633d0df29f27bd61",
+  "public/fonts/room-hand.woff2": "5a9e4413f8c1cfa479cd4381fa02dae2132c754608c4621bc6f17fb90b269c5f",
+  "public/licenses.json": "24d3dd42e98f93d0bdc831776ca56886c17b01232c5322e215f07f3046180b14",
+  "public/memories/story-01.svg": "8b1c488242e69cc9eac6e545df11ba5d5d954facbb1ba6235654fc0f70777b00",
+  "public/memories/story-02.svg": "e3cfcf1a4831f12d99ad63f810641a0d81c698559aa5d1dd95d7831b3ad20021",
+  "public/memories/story-03.svg": "0d6be55f723bddf6bf6436a707e6f3f20ced6605d7498a1092dae3e01bf64685",
+  "public/memories/story-04.svg": "219b63ef022146e4bdecd145d0fb48d6c69a3d9991d5d7dbdabf5ef7faa11eaa",
+  "public/memories/story-05.svg": "424d01702a667112b91a124e34cf45b3458672bbbe14f5a4f61c06e451fd9a8a",
+  "public/memories/story-06.svg": "0031ce002a6a40d11097b96bd55d2bc76e76feac26af808136e328a305502388",
+  "public/memories/story-07.svg": "6a56b0e32d50eeb5b9106a418b278e55752a5a37f3c5486cb4b7baac6bf3750c",
+  "public/memories/story-08.svg": "92ea135a31cdb103f7e62abd7b3c2ba62022bcf3d39cdb9f52e47e253349496d",
+  "public/memories/story-09.svg": "e98482d7dcc5baa3c674655ee316b2a4a8b63a2a3f96b07d87e2138bedbdcaef",
+  "public/memories/story-10.svg": "f0fe661b592fda71bb72a9109d38cec178c7603cb7af4b6e39cbf8ae0c6f174f",
+  "public/memories/story-11.svg": "46f100104db8c4fc7c4a7c3fc23515bebd410134d54ba71f82e1696423503084",
+  "public/memories/story-12.svg": "8a3adb95dbceb5d4000daee34ecddf272d39fa2506940f2d4334d3f731826069"
+}

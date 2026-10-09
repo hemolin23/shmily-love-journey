@@ -1,0 +1,138 @@
+{
+  "title": "还没有地址的家｜第二幕：走进亮着的房间",
+  "model": "local/minimax-h3-ref2va",
+  "shots": [
+    {
+      "id": "SH01",
+      "title": "门后是机场",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242401,
+      "generate_audio": true,
+      "references": ["public/act2/keyframes/shot-12-memory-house-final.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Blue-hour exterior of a refined six-room architectural cutaway memory house. The rooms begin dark; one warm lamp turns on. A single white tulip moves slightly in the foreground. One slow continuous camera push toward the first open doorway, and the doorway light naturally becomes an airport arrival-hall glow. Detailed wood, plaster, glass and paper, deep indigo exterior and warm amber interior. No people, no text, no subtitles, no logo, no watermark, no camera teleport, no flicker. Quiet night wind and distant airport ambience only, no music."
+    },
+    {
+      "id": "SH02",
+      "title": "白郁金香",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242402,
+      "generate_audio": true,
+      "references": ["public/act2/characters/male-protagonist-v1.png", "public/act2/characters/female-protagonist-v1.png", "public/act2/keyframes/shot-02-airport-meeting.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Use image 1 and image 2 only to lock the exact adult identities, face proportions, hairstyles, black rectangular glasses on the man, and wardrobe palette. Use image 3 for Shanghai airport composition and sunset lighting. The man waits holding a modest bouquet of white tulips, nervously rotates the stems once and wipes his free hand on his trouser seam. The woman enters pulling one small suitcase, notices him and slows down. They meet in the center without hugging; their eyes meet for one charged quiet beat. Slow controlled dolly-in, restrained adult acting, realistic hands. No dialogue, no lip-sync, no text, no duplicate people, no face morphing, no extra fingers, no sudden wardrobe change. Natural suitcase wheels and distant airport ambience only, no music."
+    },
+    {
+      "id": "SH03",
+      "title": "她先牵住他",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242403,
+      "generate_audio": true,
+      "references": ["public/act2/characters/male-protagonist-v1.png", "public/act2/characters/female-protagonist-v1.png", "public/act2/keyframes/shot-02-airport-meeting.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Preserve the exact adult couple identities from images 1 and 2 and the same first-meeting wardrobe from image 3. Inside a Shanghai metro carriage at night, a seat opens. The man hesitates and looks for space; the woman gently catches his hand and pulls him into the two adjacent seats in one continuous natural action. Their hands remain together half a second before releasing. Passing tunnel lights stripe their faces, subtle train sway, medium two-shot from aisle height. No dialogue, no lip-sync, no kissing, no exaggerated expressions, no face morphing, no extra fingers, no text or watermark. Natural metro ambience only."
+    },
+    {
+      "id": "SH04",
+      "title": "一副耳机",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242404,
+      "generate_audio": true,
+      "references": ["public/act2/characters/male-protagonist-v1.png", "public/act2/characters/female-protagonist-v1.png", "public/act2/keyframes/shot-02-airport-meeting.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Preserve the exact adult identities and first-meeting wardrobe. In the same Shanghai metro ride, the woman places one earbud in her ear and offers the other earbud to the man. He accepts it; they sit shoulder to shoulder and look forward, not at camera. The cable forms one gentle visible curve connecting them while tunnel lights glide across their faces and their faint reflection appears in the dark window. Slow lateral camera drift, restrained smiles, realistic hand motion. No dialogue, no lip-sync, no face morphing, no extra fingers, no text, no logo or watermark. Metro ambience with a barely audible muffled melody only."
+    },
+    {
+      "id": "SH05",
+      "title": "恋爱长成日常",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242405,
+      "generate_audio": true,
+      "references": ["public/act2/characters/male-protagonist-v1.png", "public/act2/characters/female-protagonist-v1.png", "public/act2/keyframes/shot-10-nature-home.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Preserve the exact adult couple identities from images 1 and 2; image 3 provides the warm lived-in home materials, not the cat action. In a compact Shanghai rental apartment, hotpot boils on a low wooden table. The man tastes a piece that is too hot and tries to hide it; the woman silently slides a water glass toward him. Then both naturally reach for the same game controller and pause with amused surprise. One smooth three-quarter camera arc, rich steam, believable food, tactile fabric and wood. No cat in this shot, no dialogue, no lip-sync, no slapstick, no face morphing, no extra fingers, no text or watermark. Hotpot bubbling and controller click only."
+    },
+    {
+      "id": "SH06",
+      "title": "雨夜不是探望，是回家",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242406,
+      "generate_audio": true,
+      "references": ["public/act2/characters/male-protagonist-v1.png", "public/act2/characters/female-protagonist-v1.png", "public/act2/keyframes/shot-06-beijing-rain.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Images 1 and 2 lock the exact adult identities; image 3 locks the cold Beijing rain, warm apartment, winter wardrobe and hotpot composition. The recovering man lifts a bowl with one slightly unsteady hand; both instinctively reach to steady it, their hands overlapping around the bowl. They exchange one tired relieved look. One slow push-in, warm amber practical lamp against blue rain window, mature companionship, restrained expression. No melodramatic embrace, no dialogue, no lip-sync, no face morphing, no extra fingers, no text or watermark. Rain, broth bubbling and a soft ceramic touch only."
+    },
+    {
+      "id": "SH07",
+      "title": "行李箱在中间",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242407,
+      "generate_audio": true,
+      "references": ["public/act2/characters/male-protagonist-v1.png", "public/act2/characters/female-protagonist-v1.png", "public/act2/keyframes/shot-06-beijing-rain.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Preserve the exact adult identities and the identical winter wardrobe from image 3. Beijing South railway station in cold morning light. One suitcase stands exactly between the couple. The gate indicator changes; the man rolls the suitcase two steps, stops, turns back and gives the woman one brief tight hug. The camera stays still at a respectful distance while commuters remain only soft background motion. End with the suitcase wheels beginning to move away. No tears to camera, no dialogue, no lip-sync, no face morphing, no duplicate people, no text or watermark. Station chime, announcement murmur and suitcase wheels only."
+    },
+    {
+      "id": "SH08",
+      "title": "新加坡这一盏灯",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242408,
+      "generate_audio": true,
+      "references": ["public/act2/characters/male-protagonist-v1.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Use the supplied character sheet only to lock the exact adult male identity, short black hair, black rectangular glasses and charcoal overshirt. Singapore student room late at night. He sits alone at a compact desk beneath one warm lamp; an unfinished paper is open on the laptop and a phone is propped beside a mug on an active video call, but the screen content is soft and unreadable. He glances from the paper to the phone, relaxes slightly, and continues typing. Slow over-shoulder push, humid city bokeh outside. No other visible person, no dialogue, no lip-sync, no text or watermark. Keyboard, air conditioner and distant city ambience only."
+    },
+    {
+      "id": "SH09",
+      "title": "北京这一盏灯",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242409,
+      "generate_audio": true,
+      "references": ["public/act2/characters/female-protagonist-v1.png", "public/act2/keyframes/shot-10-nature-home.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Image 1 locks the exact adult female identity; image 2 provides the Beijing home and Nature's exact white-gray ragdoll appearance. The woman works at a desk beneath a warm lamp. A phone is propped beside a water glass on an active video call, screen soft and unreadable. Nature's tail passes under the desk and gently moves the charging cable. She looks at the phone for one quiet second, places a small metro card beside it, and returns to work. Slow side dolly, cool winter window outside, warm interior. Exactly one woman and one cat, no dialogue, no lip-sync, no text or watermark. Page turn and cat collar only."
+    },
+    {
+      "id": "SH10",
+      "title": "Nature 是我们",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242410,
+      "generate_audio": true,
+      "references": ["public/act2/characters/male-protagonist-v1.png", "public/act2/characters/female-protagonist-v1.png", "public/act2/keyframes/shot-10-nature-home.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Images 1 and 2 lock the exact adult couple identities; image 3 locks Nature's white-gray ragdoll appearance and the warm sunlit Beijing home. Nature sits centered. The man kneels left with a feather toy; the woman kneels right holding a food bowl. Nature follows the toy, turns to the bowl and sits proudly. The couple's eyes meet over the cat and they share one small unposed smile. A game controller, metro card, two mugs and one white tulip remain secondary in frame. Gentle low-angle semicircle, detailed fur. Exactly two adults and one cat, no dialogue, no lip-sync, no face morphing, no extra fingers, no text or watermark. Cat purr and bowl touching carpet only."
+    },
+    {
+      "id": "SH11",
+      "title": "答案可以明天再说",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242411,
+      "generate_audio": true,
+      "references": ["public/act2/characters/male-protagonist-v1.png", "public/act2/characters/female-protagonist-v1.png", "public/act2/keyframes/shot-06-beijing-rain.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Preserve the exact adult couple identities. A poetic single-space representation of a late-night long-distance call after disagreement: foreground, the man at his Singapore desk deliberately puts down a pen and flips a densely written plan sheet to its blank side; background seen through the phone-sized luminous doorway, the woman in Beijing stops packing and places a sweater back on a chair. One warm lamp stays on, and one charging cable contains a small loose knot. Faces remain restrained, tired and still present. Slow static push only. No shouting, no crying, no readable phone text, no split-screen border, no dialogue, no lip-sync, no face morphing, no text or watermark. Pen, cloth and one distant cat call only."
+    },
+    {
+      "id": "SH12",
+      "title": "走进亮着的家",
+      "size": "768x1344",
+      "seconds": 5,
+      "fps": 24,
+      "seed": 4242412,
+      "generate_audio": true,
+      "references": ["public/act2/characters/male-protagonist-v1.png", "public/act2/characters/female-protagonist-v1.png", "public/act2/keyframes/shot-12-memory-house-final.png"],
+      "prompt": "Premium stylized-realistic 3D animated romantic drama, vertical 9:16, 24 fps, 5 seconds. Images 1 and 2 lock the exact adult couple identities; image 3 locks the refined architectural memory-house materials and blue-hour mood. The same couple walk side by side through the front threshold guiding one shared suitcase; the man carries one small warm lamp and the woman carries one white tulip. Nature waits just inside. As they cross the threshold, six distinct rooms illuminate in chronological order, showing only representative objects rather than duplicate people: tulips, earbuds, hotpot, suitcase, two desk lamps, cat bowl. One slow crane backward reveals the complete house against a deep indigo city. Detailed wood, plaster, glass and paper. Exactly two adults and one cat, no cloned people, no face morphing, no extra limbs, no text, no logo or watermark. Door, suitcase wheels and six soft lamp clicks only, no music."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-web/
+web-assets/
+story/private/
+outputs/
+reports/
+__pycache__/
+*.pyc
+.DS_Store
